@@ -14,7 +14,8 @@ questo file non devi condividerlo con nessuno e come se fosse una password
 - apri un powershell e fai girare lo script con questo comando ```.\setup.ps1```
 
 - fai girare il comando ```python main.py``` la prima volta ti aprira un link nel browser. 
-copialo ed incollalo nel powershell e ti verra dato un token per interfacciarti con l api
+copialo ed incollalo nel powershell e ti verra dato un token che verra scritto nel file 
+```.cache``` per interfacciarti con l api
 
 - per chiamare i metodi che ti servono leggi la documentazione e guarda gli esempi in essa
 https://spotipy.readthedocs.io/en/pga-v1.1.55/index.html#spotipy.client.Spotify
