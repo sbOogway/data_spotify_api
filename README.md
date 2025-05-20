@@ -4,10 +4,11 @@
 - dopo aver create l app (nome non e importante) devi mettere le info di esse in un file chiamato 
 .env con il seguente contenuto
 
+```
 SPOTIPY_CLIENT_ID=client_id_of_ur_app
 SPOTIPY_CLIENT_SECRET=client_secret_of_ur_app
 SPOTIPY_REDIRECT_URI=redirect_uri_of_ur_app
-
+```
 questo file non devi condividerlo con nessuno e come se fosse una password
 
 - apri un powershell e fai girare lo script con questo comando ```.\setup.ps1```
