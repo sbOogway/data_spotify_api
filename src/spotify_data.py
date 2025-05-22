@@ -70,7 +70,7 @@ for item in tracks['items']:
 
 # Salva i dati
 df = pd.DataFrame(data)
-df.to_csv("spotify_data_partial.csv", index=False)
+df.to_csv("data/spotify_data_partial.csv", index=False)
 
 print("✅ Dataset salvato come 'spotify_data_partial.csv'")
 print("🔢 Numero righe raccolte:", len(df))
