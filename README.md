@@ -24,6 +24,7 @@ copialo ed incollalo nel powershell e ti verra dato un token che verra scritto n
 https://spotipy.readthedocs.io/en/pga-v1.1.55/index.html#spotipy.client.Spotify
 
 
-
+## limitations
+currently works only 30 trackids from playlist in open spotify
 
 
