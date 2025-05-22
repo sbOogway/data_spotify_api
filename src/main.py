@@ -13,7 +13,7 @@ if __name__ == "__main__":
     # sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials())
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
 
-    ids = spotify.get_tracks_playlist("37i9dQZF1DXcBWIGoYBM5M")
+    ids = spotify.get_tracks_playlist("5Y9eVQ3u5rBAfL61OmsvDZ")
 
     # pprint(sp.category_playlists("party"))
     # exit(10)

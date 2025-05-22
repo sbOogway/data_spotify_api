@@ -1,18 +1,22 @@
 import requests
 import re
 import time
-TRACK_ID = r"track/([a-zA-Z0-9]+)"
 
+TRACK_ID = r"track/([a-zA-Z0-9]+)"
+PREVIEW = r""
 def get_tracks_playlist(playlist_id: str) -> set:
     response = requests.get(f"https://open.spotify.com/playlist/{playlist_id}")
 
     if response.status_code < 400:
         # print(response.text)
+        ids = set(re.findall(TRACK_ID, response.text))
+        print(ids, len(ids), set(ids), len(set(ids)))
 
-        # exit(10)
-        return  set(re.findall(TRACK_ID, response.text))
+        exit(10)
+        return ids
+        
 
-        # print(ids, len(ids), set(ids), len(set(ids)))
+        
 
 def get_preview(track_id: str) -> dict:
     response = requests.get(f"https://open.spotify.com/track/{track_id}")
