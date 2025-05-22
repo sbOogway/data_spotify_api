@@ -61,6 +61,6 @@ for item in tracks:
 
 # --- Salva su CSV o mostra ---
 df = pd.DataFrame(data)
-df.to_csv("playlist_dataset.csv", index=False)
+df.to_csv("data/playlist_dataset.csv", index=False)
 print("✅ Dataset salvato: playlist_dataset.csv")
 print(df.head())

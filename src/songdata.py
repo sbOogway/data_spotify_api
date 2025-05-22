@@ -15,6 +15,8 @@ VALENCE = r"<dt>Valence<\/dt>\s*<dd>(\d+)%<\/dd>"
 def get_audio_features(track_id: str) -> dict:
     response = requests.get(f"https://songdata.io/track/{track_id}/", allow_redirects=True)
 
+    print(response.elapsed.total_seconds())
+
     result = {}
 
     if response.status_code < 400:
