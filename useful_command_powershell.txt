@@ -1,0 +1,9 @@
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass #modificare temporaneamente la policy per permettere di eseguire lo script.
+
+
+.\setup.ps1 # prima volta per configurare l'ambiente
+
+
+cd path\to\project
+.\venv\Scripts\Activate.ps1  # riattivare l’ambiente virtuale manualmente in una nuova sessione PowerShell
+

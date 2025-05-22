@@ -1,0 +1,103 @@
+🎵 Track (Canzone)
+name → Titolo della canzone
+
+id / uri → ID univoco della traccia
+
+preview_url → Link audio di 30s preview
+
+duration_ms → Durata della canzone in millisecondi
+
+explicit → Flag se la canzone contiene contenuti espliciti (true/false)
+
+popularity → Punteggio da 0 a 100 (più è alto, più è ascoltata)
+
+track_number → Numero della traccia nell'album
+
+disc_number → Numero del disco (se doppio album)
+
+🎤 Artist (Artista)
+name → Nome dell’artista
+
+id → ID artista (utile per altre query)
+
+genres → Lista di generi musicali associati
+
+popularity → Popolarità dell’artista (0–100)
+
+followers.total → Numero follower su Spotify
+
+💿 Album
+name → Nome dell'album
+
+release_date → Data di uscita (es. "2019-06-07")
+
+total_tracks → Numero di tracce
+
+album_type → Tipo (album / single / compilation)
+
+images → Copertina (varie dimensioni)
+
+🎧 Playlist
+name → Nome della playlist
+
+description → Descrizione
+
+owner.display_name → Creatore della playlist
+
+tracks.total → Numero totale di canzoni
+
+public → È pubblica o privata
+
+collaborative → È collaborativa?
+
+🔍 Audio Features (analisi tecnica del brano)
+Usa endpoint /audio-features/{id}
+
+danceability → 0–1: quanto è ballabile
+
+energy → 0–1: intensità della traccia
+
+key → Tonalità musicale (0=C, 1=C#/Db, …)
+
+loudness → Volume medio in dB
+
+mode → Maggiore (1) o minore (0)
+
+speechiness → Presenza di voce parlata
+
+acousticness → Quanto è acustico
+
+instrumentalness → Presenza di voce
+
+liveness → Presenza di pubblico live
+
+valence → Emozione: positivo (1) o triste (0)
+
+tempo → BPM (battiti per minuto)
+
+duration_ms → Durata
+
+time_signature → Tempo musicale (es. 4/4)
+
+🔗 Esempio utilizzo pratico per il tuo gioco
+Vuoi fare una partita "solo anni 2000, pop, alta energia"? Puoi filtrare così:
+
+release_date tra 2000–2010
+
+genres contiene "pop"
+
+energy > 0.7
+
+danceability > 0.6
+
+preview_url ≠ null (deve avere l’audio!)
+
+
+
+###### dati necessari #####
+# track : nome, id, preview_url, explicit, popularity, track_number, 
+# artist : name, id, genres, popularity, followers.total
+# album : name, release_date, total_tracks, album_type
+# playlist : name, traks.total
+# audio features: danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, 
+# valence, tempo, duration_ms, time_signature
