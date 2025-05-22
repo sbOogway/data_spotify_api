@@ -53,19 +53,19 @@ for item in tracks['items']:
         'total_tracks': track['album']['total_tracks'],
         'album_type': track['album']['album_type'],
         
-        # audio features
-        #'danceability': features['danceability'],
-        #'energy': features['energy'],
-        #'key': features['key'],
-        #'loudness': features['loudness'],
-        #'mode': features['mode'],
-        #'speechiness': features['speechiness'],
-        #'acousticness': features['acousticness'],
-        #'instrumentalness': features['instrumentalness'],
-        #'valence': features['valence'],
-        #'tempo': features['tempo'],
-        #'duration_ms': features['duration_ms'],
-        #'time_signature': features['time_signature']
+        #audio features
+        'danceability': features['danceability'],
+        'energy': features['energy'],
+        'key': features['key'],
+        'loudness': features['loudness'],
+        'mode': features['mode'],
+        'speechiness': features['speechiness'],
+        'acousticness': features['acousticness'],
+        'instrumentalness': features['instrumentalness'],
+        'valence': features['valence'],
+        'tempo': features['tempo'],
+        'duration_ms': features['duration_ms'],
+        'time_signature': features['time_signature']
     }
 
     data.append(row)
