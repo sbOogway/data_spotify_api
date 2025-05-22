@@ -2,6 +2,8 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import pandas as pd
 import time
+import songdata
+
 
 # Autenticazione
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope="user-library-read"))

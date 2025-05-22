@@ -1,9 +1,10 @@
+import songdata
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import pandas as pd
 
 # --- Autenticazione ---
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope="playlist-read-public"))
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope="playlist-read-private"))
 
 # --- ID della playlist pubblica (puoi cambiarlo con una tua) ---
 playlist_id = "37i9dQZF1DXcBWIGoYBM5M"  # Esempio: Today's Top Hits
@@ -36,6 +37,8 @@ for item in tracks:
             'popularity': None,
             'followers': {'total': None}
         }
+
+    audio_features = songdata.get_audio_features(track) 
 
     row = {
         'track_name': track['name'],
