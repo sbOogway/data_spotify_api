@@ -1,0 +1,69 @@
+Dalla schermata iniziale si possono selezionare 2 opzioni: crea partita, unisciti a partita. Per creare una 
+partita sarà necessario effettuare log_in, per unirsi ad una partita esistente no.
+
+Una volta effettuato log in sarà possibile creare la partita, e compilare delle brevi impostazioni di gioco per 
+preparare la partita come piu' I giocatori preferiscono. Inizialmente colui che ha effettuato log in dovrà 
+selezionare: numero di giocatori (possibilità di giocare anche single player), modalità di gioco 
+(tutti contro tutti(con eliminazione o no) o a squadre), selezione delle canzoni random oppure direttamente 
+selezionate dai giocatori, modalità di calcolo punteggi (x round a partita, raggiungere una soglia x di punteggio 
+per vincere). 
+
+Una volta completata la fase precedente sarà possibile selezionare altre impostazioni di gioco relative alle canzoni 
+da ascoltare: genere, periodo, alcune opzioni relative al mood come (danceable, energy, loundness, happy/sad), 
+popolarità della canzone. Infine sarà possibile scegliere se indovinare: titolo canzone, autore, entrambi.
+Con possibilità anche di aggiungere opzioni, come indovinare il periodo, la playlist o il genere. 
+
+Al termine di questa procedurà, che verrà effettuata esclusivamente dal giocatere che ha creato la partita, 
+gli altri potranno aggiungersi al party tramite qrcode oppure codice. Se la modalità di partita selezionata 
+è a squadre i giocatori all'interno del party dovranno scegliere tra diversi colori (numero di squadre) 
+per unirsi al team che preferiscono. Se il numero di giocatori non permette di creare squadre con ugual numero 
+di partecipanti non sarà un problema (magari dare un lieve vantaggio alla squadra in minoranza, 
+esempio: 3v3 ok, 3v4 ok, 3v3v2 ok, 3v5 not ok).
+
+
+Una volta che la partita inizia, si potrà ascoltare la canzone, per i primi 5 secondi non si puo' digitare, 
+passati questi comparirà una barra dove sarà possibile scrivere titolo/autore ecc. Una volta digitata la propria 
+risposta bisogna inviarla. Al termine del tempo disponibile (30s) o prima se tutti rispondono, verrà mostrata 
+la classifica parziale con in verde di fianco ai punti totali i punti ottenuti nel round appena terminato, e le 
+risposte dei primi 3 giocatori che hanno ottenuto il punteggio piu alto nel round, punteggio che verrà aggiudicato 
+in base alla correttezza della risposta e alla velocità (puo' essere carino permettere al vincitore della mano 
+precedente di poter digitare la sua risposta senza dover aspettare i 5 secondi iniziali per incentivare a indovinare). 
+Dopo qualche secondo, colui che ha creato la partita potrà andare al round successivo e il gioco si ripete cosi. 
+La partita termina in base alle impostazioni selezionate durante la creazione della partita, con possibilità di 
+prosegiure a giocare.
+
+
+recap:
+1) impostazioni primarie SEQUENZIALI: 
+   1.1) numero giocatori / single player
+   1.2) tutti contro tutti / a squadre
+   1.3) se scelto tutti contro tutti ---> scegliere se: con/senza eliminazione
+   1.4) canzoni scelte dai giocatori / random
+   1.5) come terminare la partita: dopo x round / dopo aver raggiunto un determinato punteggio
+        (questa ultima opzione possiamo mettere anche solo dopo x round, forse è meglio, con possibilità di  prosegiure)
+
+2) impostazioni secondarie: 
+   2.1) scegliere tra : genere, periodo, mood, popolarià.
+   2.2) cosa indovinare: titolo, autore, playlist, genere, periodo o combinazioni di queste.
+
+
+- Partita tutti contro tutti ad eliminazione: 
+dopo tante canzoni quante sono i numeri di giocatori l'ultimo della classifica parziale verrà eliminato (se i giocatori sono molti si puo selezionare una soglia inferiore, esempio se giocatori > 10 ogni 5 canzoni viene eliminato uno, se I giocatori sono pochi si puo' impostare ogni 2 o 3 giri). L'ultimo che rimane vince. 
+
+- Partita tutti contro tutti: 
+A fine partita chi ha piu punti vince.
+
+- Partita a squadre: modalità ad eliminazione non disponibile, si gioca fino a termine parita, la squadra con piu punti vince. Se si è scelto l'opzione di scegliere le canzoni, ogni round 1 giocatore per squadra sceglie la canzone (in base alle preferenze di impostazioni secondarie).
+
+- single player: si puo giocare quanto si vuole, o impostare dopo 5 / 10 errori il termine della partita.
+
+
+Al termine della partità verrà mostrata la classifica finale e alcune statistiche della partita, come ad esempio: giocatore piu' veloce. 
+
+
+COSE DA VALUTARE:
+1) possibilità di fare un gioco alcolico, chi perde il round deve bere o sorteggio random tra tutti I giocatori tranne chi ha ottenuto punteggio piu alto nel round.
+2) modalità di calcolo punteggio: esempio: canzone indovinata 3 punti, autore 2 punti, solo playlist 1 punto, solo genere 1 punto, solo periodo 1 punto, canzone e autore 5 punti, tutto 8 punti e cosi via. errori non vengono penalizzati. + 2 punti al piu veloce (basta che indovina qualcosa),  + 1 punto al secondo piu veloce. -1 punto se non indovini nulla ?
+se si è in modalità a squadre punteggio attribuito in base alle contribuzioni dei giocatori, se due rispondono giusto uguale si conta come 1 risposta corretta. 
+
+
