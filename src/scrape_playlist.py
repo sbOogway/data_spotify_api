@@ -98,7 +98,7 @@ if __name__ == "__main__":
                 songs.insert_one(data)
                 logging.debug(f"song added to database {id}")
             except errors.DuplicateKeyError:
-                logging.warning(f"song already scraped {id}")
+                logging.debug(f"song already scraped {id}")
                 pass
             
             time.sleep(10)
