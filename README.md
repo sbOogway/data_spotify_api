@@ -25,6 +25,7 @@ https://spotipy.readthedocs.io/en/pga-v1.1.55/index.html#spotipy.client.Spotify
 
 
 ## limitations
-currently works only 30 trackids from playlist in open spotify
+- currently works only 30 trackids from playlist in open spotify 
+- get song lirycs and song language from genius? https://github.com/johnwmillr/LyricsGenius
 
 

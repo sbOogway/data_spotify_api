@@ -57,6 +57,10 @@ if __name__ == "__main__":
         songs.create_index("id", unique=True)
         playlists.create_index("id", unique=True)
 
+        songs_db = songs.find({}, {"id": 1, "_id": 0})
+
+        songs_db = list(map(lambda x : list(x.values())[0], songs_db))
+
         sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
 
         if playlists.find_one({"id": playlist_id}) != None:
@@ -66,7 +70,12 @@ if __name__ == "__main__":
         logging.info(f"starting scraping playlist {playlist_id}")
 
         batch = 100
-        pl = sp.playlist_items(playlist_id, limit=batch)
+        try:
+            pl = sp.playlist_items(playlist_id, limit=batch)
+        except spotipy.exceptions.SpotifyException:
+            playlists.insert_one({"id": playlist_id})
+            logging.info(f"finished scraping playlist {playlist_id}")
+            exit(1)
 
         pl_length = pl["total"]
         items: list = pl["items"]
@@ -78,9 +87,23 @@ if __name__ == "__main__":
             song_reccate += batch
             items += pl["items"]
         
+        ids = []
+        
         for track in items:
             id = track["track"]["uri"].split(":")[-1]
-            previews = spotify.get_preview(id)
+            ids.append(id)
+
+        intersection = set(ids) & set(songs_db)
+        ids = list(set(ids) - intersection)
+        # exit(10)
+
+        for id in ids:
+            try:
+                previews = spotify.get_preview(id)
+            except IndexError:
+                logging.error(f"error spotify preview {id}")
+                continue
+
             data = sp.track(id)
             try:
                 features = songdata.get_audio_features(id)
@@ -101,11 +124,10 @@ if __name__ == "__main__":
                 logging.debug(f"song already scraped {id}")
                 pass
             
-            time.sleep(10)
+            time.sleep(20)
         
 
         playlist = sp.playlist(playlist_id)
-        # try:
         playlists.insert_one(playlist)
         logging.info(f"finished scraping playlist {playlist_id}")
         # except errors.DuplicateKeyError:
