@@ -64,7 +64,7 @@ if __name__ == "__main__":
         sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
 
         if playlists.find_one({"id": playlist_id}) != None:
-            logging.warning(f"playlist already scraped {playlist_id}")
+            logging.info(f"playlist already scraped {playlist_id}")
             exit(1)
 
         logging.info(f"starting scraping playlist {playlist_id}")
@@ -109,6 +109,7 @@ if __name__ == "__main__":
                 features = songdata.get_audio_features(id)
             except requests.exceptions.HTTPError:
                 logging.error(f"error songdata {id}")
+                time.sleep(10)
                 continue
             data.update(features)
             data.update(previews)
