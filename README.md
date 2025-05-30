@@ -30,5 +30,5 @@ https://spotipy.readthedocs.io/en/pga-v1.1.55/index.html#spotipy.client.Spotify
 ## ideas
 - use bluetooth for game play?
 - get song lirycs and song language from genius? https://github.com/johnwmillr/LyricsGenius
-
+- get bpm and key from songdata
 

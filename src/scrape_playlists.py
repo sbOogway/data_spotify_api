@@ -7,7 +7,7 @@ if __name__ == "__main__":
     # playlist_ids_file = sys.argv[1]
     # try:
     lines = []
-    with open("data/link_playlist.txt", "r") as f:
+    with open("data/link_playlist2.txt", "r") as f:
         lines = f.readlines()
 
     for line in lines:

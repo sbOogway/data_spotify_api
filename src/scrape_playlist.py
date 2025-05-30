@@ -77,8 +77,11 @@ if __name__ == "__main__":
             logging.info(f"finished scraping playlist {playlist_id}")
             exit(1)
 
-        pl_length = pl["total"]
+        pl_length = pl["total"]        
         items: list = pl["items"]
+        logging.debug(f"number of songs in {playlist_id} - {pl_length}")
+
+        
         
         song_reccate = batch
 
@@ -97,7 +100,7 @@ if __name__ == "__main__":
         ids = list(set(ids) - intersection)
         # exit(10)
 
-        for id in ids:
+        for index, id in enumerate(ids):
             try:
                 previews = spotify.get_preview(id)
             except IndexError:
@@ -120,7 +123,7 @@ if __name__ == "__main__":
             
             try:
                 songs.insert_one(data)
-                logging.debug(f"song added to database {id}")
+                logging.debug(f"song added to database {id} {index+1}/{pl_length}")
             except errors.DuplicateKeyError:
                 logging.debug(f"song already scraped {id}")
                 pass
