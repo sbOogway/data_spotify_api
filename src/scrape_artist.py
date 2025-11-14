@@ -84,7 +84,7 @@ if __name__ == "__main__":
             artist = sp.artist(art)
             artists.insert_one(artist)
             logging.debug(f'new artists added to database {artist["name"]} - {artist["genres"]}')
-            time.sleep(20)
+            time.sleep(40)
 
         exit()
     except KeyboardInterrupt:
