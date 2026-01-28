@@ -32,3 +32,5 @@ https://spotipy.readthedocs.io/en/pga-v1.1.55/index.html#spotipy.client.Spotify
 - get song lirycs and song language from genius? https://github.com/johnwmillr/LyricsGenius
 - get bpm and key from songdata
 - get other streamin platforms links
+
+yolo
