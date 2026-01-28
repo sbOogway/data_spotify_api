@@ -33,4 +33,4 @@ https://spotipy.readthedocs.io/en/pga-v1.1.55/index.html#spotipy.client.Spotify
 - get bpm and key from songdata
 - get other streamin platforms links
 
-yoloyy
+yolo
